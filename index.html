@@ -2,14 +2,14 @@
 <!-- happy -->
 <head>
     <link rel="StyleSheet" href="style.css" type="text/css" media="all">
-    <title>MIP: Enhancing Visible-Infrared Person Re-identification with Modality- and Instance-aware Visual Prompt Learning</title>
+    <title>SeCap: Self-Calibrating and Adaptive Prompts for Cross-view Person Re-Identification in Aerial-Ground Networks</title>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
     <br>
     <div class="center-div" align="center">
-        <span style="font-size:28px">Enhancing Visible-Infrared Person Re-identification with Modality- and Instance-aware Visual Prompt Learning</span>
+        <span style="font-size:28px">SeCap: Self-Calibrating and Adaptive Prompts for Cross-view Person Re-Identification in Aerial-Ground Networks</span>
     </div>
 
     <br>
@@ -18,10 +18,22 @@
             <tr>
                 <td align="center" width="150px">
                     <div class="center-div">
-                        <span style="font-size:18px"><a href="https://scholar.google.com/citations?user=cRmHbWkAAAAJ&hl=en" target="_blank">Ruiqi Wu</a></span>
+                        <span style="font-size:18px"><a href="https://scholar.google.com" target="_blank">Shining Wang</a></span>
                     </div>
                 </td>
                 
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:18px"><a href="https://scholar.google.com/" target="_blank">Yunlong Wang</a></span>
+                    </div>
+                </td>
+                
+                <td align="center" width="150px">
+                    <div class="center-div">
+                        <span style="font-size:18px"><a href="https://scholar.google.com/citations?user=cRmHbWkAAAAJ&hl=en" target="_blank">Ruiqi Wu</a></span>
+                    </div>
+                </td>
+
                 <td align="center" width="150px">
                     <div class="center-div">
                         <span style="font-size:18px"><a href="https://scholar.google.com/citations?user=a-RAVckAAAAJ&hl=en" target="_blank">Bingliang Jiao</a></span>
@@ -36,16 +48,9 @@
 
                 <td align="center" width="150px">
                     <div class="center-div">
-                        <span style="font-size:18px"><a href="https://scholar.google.com/" target="_blank">Meng Liu</a></span>
-                    </div>
-                </td>
-
-                <td align="center" width="150px">
-                    <div class="center-div">
                         <span style="font-size:18px"><a href="https://scholar.google.com/citations?user=aPLp7pAAAAAJ&hl=en" target="_blank">Peng Wang</a></span>
                     </div>
                 </td>
-
             </tr>
         </tbody>
     </table>
@@ -55,10 +60,16 @@
             <tr>
                 <td align="center" width="1200px">
                     <div class="center-div">
-                        <span style="font-size:18px">Northwestern Polytechnical University </span>
+                        <span style="font-size:18px">School of Computer Science, Northwestern Polytechnical University, China </span>
                     </div>
                     <div class="center-div">
-                        <span style="font-size:18px">National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology</span>
+                        <span style="font-size:18px">Ningbo Institute, Northwestern Polytechnical University, China</span>
+                    </div>
+                    <div class="center-div">
+                        <span style="font-size:18px">Shenzhen Research Institute, Northwestern Polytechnical University, China</span>
+                    </div>
+                    <div class="center-div">
+                        <span style="font-size:18px">National Engineering Laboratory for integrated Aero-Space-Ground-Ocean, Xi'an, Shaanxi, China</span>
                     </div>
                 </td>
             </tr>
@@ -75,29 +86,65 @@
         <td>
             <div>
             <span style="font-size:18px"> 
-            The Visible-Infrared Person Re-identification (VI ReID) aims to 
-            match visible and infrared images of the same pedestrians across
-            non-overlapped camera views. These two input modalities contain
-            both invariant information, such as shape, and modality-specific
-            details, such as color. An ideal model should utilize valuable information 
-            from bothmodalities during training for enhanced representational capability. 
-            However, the gap caused by modality-specific information poses substantial 
-            challenges for the VI ReID model to handle distinct modality inputs simultaneously. 
-            To address this, we introduce the Modality-aware and Instance-aware Visual Prompts
-            (MIP) network in our work, designed to effectively utilize both invariant 
-            and specific information for identification. Specifically, our
-            MIP model is built on the transformer architecture. In this model,
-            we have designed a series of modality-specific prompts, which
-            could enable our model to adapt to and make use of the specific
-            information inherent in different modality inputs, thereby reducing
-            the interference caused by the modality gap and achieving better
-            identification. Besides, we also employ each pedestrian feature to
-            construct a group of instance-specific prompts. These customized
-            prompts are responsible for guiding our model to adapt to each
-            pedestrian instance dynamically, thereby capturing identity-level discriminative 
-            clues for identification. Through extensive experiments on SYSU-MM01 and RegDB datasets, 
-            the effectiveness of  both our designed modules is evaluated. Additionally, our proposed
-            MIP performs better than most state-of-the-art methods.
+                When discussing the Aerial-Ground Person Re-identification (AGPReID) task, 
+                we face the main challenge of the significant appearance variations caused by different viewpoints, 
+                making identity matching difficult. To address this issue, previous methods attempt to reduce the 
+                differences between viewpoints by critical attributes and decoupling the viewpoints. 
+                While these methods can mitigate viewpoint differences to some extent, they still face two main issues: 
+                (1) difficulty in handling viewpoint diversity and (2) neglect of the contribution of local features. 
+                To effectively address these challenges, we design and implement the Self-Calibrating and Adaptive Prompt 
+                (SeCap) method for the AGPReID task. The core of this framework relies on the Prompt Re-calibration Module 
+                (PRM), which adaptively re-calibrates prompts based on the input. Combined with the Local Feature Refinement 
+                Module (LFRM), SeCap can extract view-invariant features from local features for AGPReID. Meanwhile, given the 
+                current scarcity of datasets in the AGPReID field, we further contribute two real-world Large-scale Aerial-Ground 
+                Person Re-Identification datasets, LAGPeR and G2APS-ReID. The former is collected and annotated by us independently, 
+                covering $4,231$ unique identities and containing $63,841$ high-quality images; the latter is reconstructed from the 
+                person search dataset G2APS. Through extensive experiments on AGPReID datasets, we demonstrate that SeCap is a 
+                feasible and effective solution for the AGPReID task.
+            </div>
+        </td>
+       
+    </table>
+    <br><br>
+    <hr>
+    <div class="center-div" align="center">
+        <h2>Dataset Download</h2>
+    </div>
+    <div>
+        <h3>Data Release Agreement</h3>
+    </div>
+    <table align="center" width="1000px">
+        <td>
+            <div>
+            <span style="font-size:18px"> 
+                Dataset records are made available to researchers only after the receipt and acceptance of
+                 a completed and signed Database Release Agreement.
+            </div>
+            <span style="font-size:14px">
+                <a href="./Restrictions for The Use of LAGPeR Dataset.pdf">[Bibtex]</a>
+                <!-- <a href="https://drive.google.com/open?id=1wpqZCYh7gGKz897C-hQbgR7CHbJdBGxg">[Dataset Google Drive]</a>
+                <a href="https://pan.baidu.com/s/1jhBqJeXShYyChfp1K3RcCw">[Dataset Baidu Drive](password:n2zw)</a> -->
+            </span>
+        </td>
+       
+    </table>
+    <br><br>
+    <hr>
+    <div class="center-div" align="center">
+        <h2>Large-scale Aerial-Ground Person Re-identification(LAGPeR) datasets</h2>
+    </div>
+    <table align="center" width="1000px">
+        <td>
+            <div>
+            <span style="font-size:18px"> 
+                To expand the datasets available for the AGPReID task, 
+                we contribute the LAGPeR and G2APS-ReID datasets. 
+                The LAGPeR dataset is independently collected, annotated, and partitioned by us,
+                 and it includes data from 21 cameras, 7 scenes, and 3 perspectives 
+                 (with ground perspectives divided into oblique and frontal views).  
+                 The G2APS-ReID dataset is reconstructed from the large-scale person search dataset G2APS.
+                  Since the original G2APS dataset only considers retrieval tasks from ground to aerial view,
+                   which do not fully meet the requirements of the AGPReID task, we re-partition the G2APS.
             </div>
         </td>
        
@@ -106,20 +153,24 @@
 
     <hr>
     <div class="center-div" align="center">
-        <h2>Modality- and Instance-aware Visual Prompts (MIP) Network</h2>
+        <h2>Self-Calibrating and Adaptive Prompt (SeCap) method</h2>
     </div>
 
     <table align="center" width="1000px">
         <td>
             <div>
-            <span style="font-size:18px">We introduce a MIP network designed for the VI ReID task. 
-                Our primary focus is on adapting the model to different modality inputs and instance inputs, 
-                thereby mining the correspondences between different modalities/instances to facilitate VI ReID. 
-                We achieve these goals by employing two distinct sets of visual prompts.
-                Specifically, we produce modality-specific prompts and instance-specific prompts according to current modality and instance input, 
-                and these two sets of prompts are concatenated after the feature embedding. 
-                By making use of modality-specific and instance-specific information preserved in these prompts, 
-                the model can explore potential correspondences between different modalities and instances, thereby facilitating the VI ReID.
+            <span style="font-size:18px">We proposes an AGPReID framework named SeCap, 
+                which self-calibrates and adaptively generates prompts based on the inputs 
+                for cross-view person re-identification. This framework adopts an encoder-decoder 
+                transformer architecture. The encoder employs the View Decoupling Transformer (VDT) for 
+                viewpoint decoupling, while the decoder further decodes local features using the view-invariant features. 
+                Specifically, the decoder comprises the Prompt Re-calibration Module (PRM) and the Local Feature Refinement
+                 Module (LPRM). To address the challenge of viewpoint diversity, we design the PRM 
+                 to re-calibrate prompts based on the input adaptively. It dynamically generates and self-calibrates 
+                 prompts that closely align with the current viewpoint, thus adapt to different viewpoints. To fully 
+                 leverage the role of local features, we design the LPRM for local feature refinement. 
+                 This module uses re-calibrated prompts and employs the to-way attention mechanism to synchronously 
+                 update various features, thereby learning view-invariant information from local features.
             </div>
         </td>
     </table>
@@ -130,14 +181,14 @@
             <tr>
                 <td>
                     <div class="center-div" align="center">
-                        <a href="#"><img src="imgs/FIG_FRAMEWORK.png" width="1000px"></a><br>
+                        <a href="#"><img src="imgs/FIG_FRAMEWORK.pdf" width="1000px"></a><br>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="center-div" align="center">
-                        <span style="font-size:16px"><i>MIP Overall Framework</i>
+                        <span style="font-size:16px"><i>SeCap Overall Framework</i>
                         </span></div>
                 </td>
             </tr>
@@ -148,14 +199,14 @@
     <table align="center" width="1000px">
         <td>
             <div>
-            <span style="font-size:18px"> The overall framework of our proposed MIP network, which consists of a backbone model and two major modules. 
-                (a) A pre-trained vision transformer is used as the backbone model. 
-                (b) Modality-aware Prompts Learning (MPL) module produces modality-specific prompts 
-                for input visual embeddings of each layer according to the modality labels of input images. 
-                (c) Instance-aware Prompts Generator (IPG) module generates instance-specific prompts, 
-                and the generated prompts are supervised by "IAEL loss". 
-                The "IAEL Loss" is our proposed Instance-aware Enhancement Loss. 
-                The two kinds of rompts help the backbone network to adapt to different modality and instance inputs.
+            <span style="font-size:18px"> The overall framework of SeCap adopts an encoder-decoder transformer architecture.
+                 The encoder is the view decoupling transformer (VDT).
+                  In contrast to the conventional ViT, our approach incorporates the View token and performs hierarchical
+                   decoupling of the Cls token at each layer, effectively segregating view-related and 
+                   view-invariant features within the Cls token, while extracting local features from the input.
+                    The decoder comprises the Prompt Re-calibration Module (PRM) and the Local Feature Refinement Module (LFRM).
+                     The PRM adaptively generates and re-calibrates prompts for different viewpoints based on the current viewpoint
+                      information. Concurrently, the LFRM utilizes the re-calibrated prompts from the PRM to decode the local features.
             </div>
         </td>
     </table>
@@ -227,20 +278,20 @@
                 </td>
                 <td> &nbsp &nbsp </td>
                 <td>
-					<b><span style="display:inline-block;width:600px;font-size:14pt">  Enhancing Visible-Infrared Person Re-identification with Modality- and Instance-aware Visual Prompt Learning
+					<b><span style="display:inline-block;width:600px;font-size:14pt">  SeCap: Self-Calibrating and Adaptive Prompts for Cross-view Person Re-Identification in Aerial-Ground Networks
                     </span></b>
                     <br><br>
-                    <span style="font-size:14pt"> Ruiqi Wu<sup>*</sup>, Bingliang Jiao<sup>*</sup>, Wenxuan Wang<sup>†</sup>, Meng Liu, Peng Wang</span>
+                    <span style="font-size:14pt"> Shining Wang<sup>*</sup>, Yunlong Wang<sup>*</sup>, Ruiqi Wu, Bingliang Jiao, Wenxuan Wang<sup>†</sup>, Peng Wang</span>
                     <br><br>
                     <span style="font-size:10pt"> <sup>*</sup>Equal contribution; <sup>†</sup>Corresponding author.</span>
                     <br><br>
-                    <span style="font-size:14pt"> ICMR 2024, Oral</span>
+                    <span style="font-size:14pt"> CVPR 2025, HighLight</span>
                     <br><br>
                     <span style="font-size:14px">
-                        <a href="https://dl.acm.org/doi/10.1145/3652583.3658109">[Paper]</a>
+                        <a href="https://arxiv.org/abs/2503.06965">[Paper]</a>
                         <a href="./BibTex.bib">[Bibtex]</a>
-                        <a href="https://arxiv.org/abs/2406.12316">[arXiv]</a>
-                        <a href="https://github.com/BlackPIQUE-Wu/MIP">[GitHub]</a>
+                        <a href="https://arxiv.org/abs/2503.06965">[arXiv]</a>
+                        <a href="https://github.com/wangshining681/SeCap-AGPReID">[GitHub]</a>
                         <!-- <a href="https://drive.google.com/open?id=1wpqZCYh7gGKz897C-hQbgR7CHbJdBGxg">[Dataset Google Drive]</a>
                         <a href="https://pan.baidu.com/s/1jhBqJeXShYyChfp1K3RcCw">[Dataset Baidu Drive](password:n2zw)</a> -->
                     </span>
@@ -279,14 +330,14 @@
     <table align="center" width="1000px">
         <td>
             <div>
-            <span style="font-size:18px"> The experiment results of our MIP and other state-of-the-art methods under various test modes of SYSU-MM01 and RegDB datasets. 
-                Summarily, our proposed MIP outperforms other state-of-the-art methods on both two mainstream datasets. 
+            <span style="font-size:18px"> The experiment results of our SeCap and other methods under various test modes of LAGPeR and G2APS-ReID datasets. 
+                Summarily, our proposed SeCap outperforms other state-of-the-art methods on both two datasets. 
             </div>
         </td>
     </table>
     <br><br>
 
-	<br>
+	<!-- <br>
     <table align="center">
         <tbody>
             <tr>
@@ -317,7 +368,7 @@
             </div>
         </td>
     </table>
-    <br><br>
+    <br><br> -->
     
     <hr>
     <table align="center" width="980px">
